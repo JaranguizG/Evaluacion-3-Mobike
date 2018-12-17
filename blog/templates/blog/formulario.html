@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+  <link rel="stylesheet" href="{% static 'css/gal.css'%}">
+  <link rel="stylesheet" href="{% static 'css/form.css'%}">
+
+     <main>
+            <p id="gal" >→ Zona</p>
+            <h1 id="titulo" >Zonas de estacionamiento</h1>
+     
+         <div id="">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.8645727191188!2d-70.5324783851663!3d-33.452834680773165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662ce47f094c613%3A0x7cacd53c10e8cedc!2sMunicipalidad+de+la+Reina!5e0!3m2!1ses!2scl!4v1542063538363" width="600" height="450" frameborder="0" style="width: 1000px; height: 666px;" allowfullscreen></iframe>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.806448575203!2d-70.59173618770286!3d-33.45434882943352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3d9ef28f7ff29199!2sEstacionamiento+MOBIKE!5e0!3m2!1ses!2scl!4v1543318298729" width="600" height="450" frameborder="0" style="width: 1000px; height: 666px; allowfullscreen></iframe>
+         </div>
+     </main>
+<script src="{% static 'js/rut.js' %}"></script>
+<script src="{% static 'js/cityS.js' %}"></script>
+</body>
+{% endblock %}

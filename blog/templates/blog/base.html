@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Mobike</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+
+</head>
+{% block header %}
+<header>
+
+
+
+        <h1 id="head">Mobike</h1>
+      <nav>
+        <ul id="menu">
+          <li><a href="{% url 'index' %}" tabindex="1">Inicio</a></li>
+          <li><a href="{% url 'galeria' %}" tabindex="2">Arrienda</a></li>
+          <li><a href="{% url 'formulario' %}" tabindex="3">GPS</a></li>
+
+
+        <li class="Hola">{% if user.is_authenticated %}
+        <a tabindex="4"> Usuario: {{ user.username }} </a></li>
+
+        <li class="Cerrar">
+          <a href="{% url 'sign_out' %}" tabindex="5" >Cerrar sesión</a>
+        </li>
+
+        <li class="Hola">
+           {% else %}
+          <a href="{% url 'sign_up' %}">Registrate</a>
+        </li>
+        <li class="Hola">
+          <a href="{% url 'sign_in' %}">Iniciar sesión</a>
+        </li>
+          {% endif %}
+      
+        </li>
+        </ul>
+
+</div>
+
+
+      </nav>
+  </header>
+
+{% endblock %}
+
+{% block content %}
+
+
+{% endblock %}
+
+{% block footer %}
+<footer>
+  <div id="contacto">
+    <h4 class="cont" >INFORMACION DE CONTACTO</h4>
+    <br/>
+    <h5 class="cont" >TELÉFONO</h5>
+    <p class="cont" > <a href="tel:+56993545627">
+                +569 93 5456 27 </a> </p>
+    <br/>
+    <h5 class="cont" >CORREO ELECTRÓNICO</h5>
+    <p class="cont" ><a href="mailto:adopta@adoptdogs.cl">
+                bike@bike.cl</a> </p>
+    <p class="p" >@ Todos los derechos reservados</p>
+  </div>
+  <br>
+  
+</footer>
+</body>
+{% endblock %}
